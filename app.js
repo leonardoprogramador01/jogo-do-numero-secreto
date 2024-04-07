@@ -13,7 +13,7 @@ responsiveVoice.speak(texto,'Brazilian Portuguese Female', {rate:1.2});
 function mensagemIncial(){
 
   textosDoJogo('h1', 'Jogo do numero secreto');
-  textosDoJogo('p', 'CHUTE UM NUMERO ENTRE 1 E 10');
+  textosDoJogo('p', 'Escolha um número entre 1 e 10');
   
 }
 
