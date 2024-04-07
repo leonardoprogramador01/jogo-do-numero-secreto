@@ -12,7 +12,7 @@ responsiveVoice.speak(texto,'Brazilian Portuguese Female', {rate:1.2});
 
 function mensagemIncial(){
 
-  textosDoJogo('h1', 'Jogo do numero secreto');
+  textosDoJogo('h1', 'Jogo do número secreto');
   textosDoJogo('p', 'Escolha um número entre 1 e 10');
   
 }
@@ -21,11 +21,11 @@ mensagemIncial();
 
 function verificarChute(){
   let chute = document.querySelector('input').value;
-  let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'; 
+  let palavraTentativa = tentativas > 1 ? 'tentativas !' : 'tentativa !'; 
 
   if ( chute == numeroSecreto) {
-   textosDoJogo('h1','acertou');
-   textosDoJogo('p', `vc acertou com ${tentativas} ${palavraTentativa}`);
+   textosDoJogo('h1','Acertou !!!');
+   textosDoJogo('p', `Você acertou o número secreto com ${tentativas} ${palavraTentativa}`);
    document.getElementById('reiniciar').removeAttribute('disabled');
    limparJogo();
   }
@@ -33,12 +33,12 @@ function verificarChute(){
   else {
   
   if (chute<numeroSecreto){
-  textosDoJogo('h1','errou');
-  textosDoJogo('p','numero secreto é maior ');
+  textosDoJogo('h1','Errou');
+  textosDoJogo('p','Número secreto é maior ');
   }
   else{
-  textosDoJogo('h1','errou');
-  textosDoJogo('p','numero secreto é menor');
+  textosDoJogo('h1', 'Errou');
+  textosDoJogo('p','Número secreto é menor');
   }
 
   tentativas++;
